@@ -1,0 +1,250 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Summary of hybrid flight status - By Elevenbeans</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.dark.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script><h1>Hybrid 版<a href="https://english.ctrip.com/flightsh5/status/?opentest=1" target="_blank">航班动态</a>开发小结</h1>
+<p>—— 这可能是我们<strong>机票</strong>首个 H5 和 Native <strong>协作开发</strong>的项目</p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h1 class="flexbox vleft">简介</h1>
+
+</hgroup><article>
+
+<ul>
+<li>旧版 Native 的 Flight status 年代久远，目前几乎没有继续迭代。其功能几乎完全独立且不涉及订单流程。故整体拆分出来交由 H5 团队，发挥 H5 <strong>灵活敏捷</strong>的优势，快速迭代新的玩法(<strong>如延误概率实时数据图表展示</strong>)</li>
+<li>Tech stack<ul>
+<li>又爱又恨的 Lizard (react-lite + requireJs...)</li>
+<li>ES6 + Postcss</li>
+<li><strong>Hybrid API</strong></li>
+<li>构建：gulp &amp;&amp; 打包：webpack</li>
+</ul>
+</li>
+<li>详细介绍传请戳<a href="http://git.dev.sh.ctripcorp.com/lbin/Ctripglobal/wikis/flight-status" target="_blank">这里</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<hgroup>
+<h3 class="flexbox vleft">首页</h3>
+
+</hgroup><article>
+
+<p><img src="./img/search.png" alt="img">
+<br />
+Tab组件(based on <a href="https://github.com/hokaccha/js-flipsnap" target="_blank">Flipsnap</a>)</p>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h3 class="flexbox vleft">列表页</h3>
+<p><img src="./img/list.png" alt="img">
+<br />
+左滑操作</p>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem far-next pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h3 class="flexbox vleft">列表页性能调优</h3>
+<p><img src="./img/iscroll.gif" alt="img">
+<img src="./img/iscroll-lazyload.gif" alt="img">
+<img src="./img/native-scroll-ptr.gif" alt="img">
+<br />
+左: <a href="https://github.com/cubiq/iscroll" target="_blank">iScroll</a> 中：<a href="https://github.com/cubiq/iscroll" target="_blank">iScroll</a>+<a href="https://github.com/jasonslyvia/react-lazyload" target="_blank">lazyload</a> 右：<strong>native scroll</strong>+<a href="https://github.com/elevenbeans/my-utils/blob/master/src/pulltorefresh.js" target="_blank">pulltorefresh</a></p>
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h3 class="flexbox vleft">详情页</h3>
+<p><img src="./img/detail.png" alt="img">
+<br />
+DataView 组件(based on nothing) + 逻辑和视图分层</p>
+<p>(<strong>这时候可以举两个🌰</strong>)</p>
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h1 class="flexbox vleft">挑战和困难</h1>
+<ul>
+<li>Native APP 环境和 Browser 差异性 (<strong>Back／PTR</strong>)</li>
+<li>Native 资源</li>
+<li>测试环境数据问题</li>
+<li>... ...</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h1 class="flexbox vleft">沉淀与积累</h1>
+<ul>
+<li><a href="http://git.dev.sh.ctripcorp.com/lbin/Ctripglobal/wikis/hybrid-api-list" target="_blank">Hybrid API list</a> (We can talk more..)</li>
+<li>Componets:<ul>
+<li>全局 Toast</li>
+<li>封装 + 精简化后的 JSBridge</li>
+<li><strong>PullToRefresh</strong></li>
+</ul>
+</li>
+<li>博文一篇：<a href="http://elevenbeans.github.io/2017/09/19/pull-to-refresh/" target="_blank">60 行 JS 代码搞定一个下拉刷新组件</a></li>
+<li>Shark 对接 (to do ...)</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>THX</h1>
+<p>毛凯露, 冉余, 章润民, 蔡晨遥, 汤建中, 夏光灿
+<br />IBU test group, 王笑笑, 张海峰 ...
+<br /><br />
+<i class="fa fa-github" style="font-size:38px"></i>
+<i class="fa fa-html5" style="font-size:38px"></i>
+<i class="fa fa-css3" style="font-size:38px"></i>
+<i class="fa fa-google" style="font-size:38px"></i>
+<i class="fa fa-apple" style="font-size:38px"></i>
+<i class="fa fa-android" style="font-size:38px"></i></p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Q&amp;A</h1>
+  <script src="https://unpkg.com/frappe-charts@0.0.4/dist/frappe-charts.min.iife.js"></script>
+
+<div id = "chart"></div><script>
+const data = {
+    labels: ["12am-3am", "3am-6pm", "6am-9am", "9am-12am",
+        "12pm-3pm", "3pm-6pm", "6pm-9pm", "9am-12am"
+    ],
+    datasets: [
+        {
+            title: "Some Data",
+            color: "light-blue",
+            values: [25, 40, 30, 35, 8, 52, 17, -4]
+        },
+        {
+            title: "Another Set",
+            color: "violet",
+            values: [25, 50, -10, 15, 18, 32, 27, 14]
+        }
+    ]
+}
+
+const chart = new Chart({
+    parent: '#chart', // or a DOM element
+    title: "My Awesome Chart",
+    data: data,
+    type: 'line', // or 'line', 'scatter', 'pie', 'percentage'
+    height: 250,
+    color: 'white'
+})
+</script>
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  config: ["TeX-AMS-MML_HTMLorMML.js"],
+  tex2jax: {inlineMath: [['\\(','\\)']]}});
+  //['$','$'], 避免货币价格冲突
+</script>
+<script type="text/javascript" src="./js/mathjax/MathJax.js"></script>
+
+<!--placeholder-->
+</body>
+</html>

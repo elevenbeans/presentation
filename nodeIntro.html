@@ -1,0 +1,250 @@
+<!--
+    Powered By nodeppt - This is probably the best web presentation tool so far!
+    version: 1.4.5
+    site: https://github.com/ksky521/nodeppt
+    date: 
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>nodeIntro - By elevenBeans</title>
+    <link rel="stylesheet" media="all" href="./css/nodeppt.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
+    
+    <link rel="stylesheet" href="./js/highlight/styles/monokai_sublime.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    
+<link rel="stylesheet" href="./css/theme.dark.css">
+</head>
+<body>
+<div class="slides">
+    <slides id="container">
+        <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>大家一起学 Node</h1>
+<p>—— 可能是迄今为止<strong>最具野心</strong>的前端技术</p>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><hgroup>
+<h2 class="flexbox vleft">What is Node ？</h2>
+
+</hgroup><article>
+
+<ul>
+<li>Node.js® is <strong>a JavaScript runtime</strong> built on Chrome&#39;s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2 class="flexbox vleft">What can Node do ？</h2>
+<ul>
+<li>随心所欲的文件 I/O</li>
+<li>搭建 WebSocket <strong>服务端</strong>、连接 DB、玩转多进程</li>
+<li>甚至，它能让 HTML + CSS + JavaScript 开发出桌面应用</li>
+<li>... ...</li>
+</ul>
+<h2 class="flexbox vleft">Advantage</h2>
+<ul>
+<li>lightweight and efficient</li>
+<li>has the largest ecosystem of open source libraries</li>
+<li>using <strong>JavaScript</strong> ...</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"   data-on-build="Slide.magic" data-on-enter="Slide.magic.init"><section class="slide-wrapper"><div class="magic"><div class="magicItem current pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<hgroup>
+<h2 class="flexbox vleft">基本框架</h2>
+
+</hgroup><article>
+
+<h3>与 Chrome 前端环境的对比</h3>
+<img src="./img/chromeVSnode.png" alt="img">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem next pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h2 class="flexbox vleft">基本框架</h2>
+<h3>跨平台 &amp;&amp; 异步 IO 的实现框架</h3>
+<img src="./img/libuv.png" alt="img">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem far-next pagedown"  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h2 class="flexbox vleft">基本框架</h2>
+<h3>Node 的模块机制</h3>
+<img src="./img/module.png" alt="img">
+
+</article>
+</div>
+</article></div>
+<div class="magicItem "  data-transition="vertical3d"><article>
+<div class="magic-wrapper">
+<article>
+<h2 class="flexbox vleft">基本框架</h2>
+<h3>For example: <code>fs.open</code></h3>
+<img src="./img/eg.png" alt="img">
+
+</article>
+</div>
+</article></div></div></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2 class="flexbox vleft">Start to use node!</h2>
+<ul>
+<li>nvm + npm</li>
+<li>前端构建工具: gulp, grunt; 打包工具: webpack; 其他: nodePPT</li>
+<li><strong>后端应用开发</strong>: express, koa, hexo<ul>
+<li>路由</li>
+<li>数据库操作</li>
+<li>service 调用：node-soap, request</li>
+<li>Java 调用: node-hessian, node-java</li>
+</ul>
+</li>
+<li>桌面应用开发: node-webkit</li>
+<li>单元测试: mocha + should + istanbul(后端); mocha + chai + phantomjs(前端)</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>nvm + npm</h2>
+<ul>
+<li><a href="http://www.kancloud.cn/summer/nodejs-install/71975" target="_blank">快速搭建 node 开发环境</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>前端工具</h2>
+<ul>
+<li>gulp， grunt</li>
+<li><strong>webpack</strong></li>
+<li><a href="https://github.com/ksky521/nodePPT" target="_blank">nodeppt</a></li>
+<li>... ...</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>后端开发</h2>
+<ul>
+<li><strong>express</strong>, <strong>koa</strong><ul>
+<li><a href="http://www.expressjs.com.cn/guide/routing.html" target="_blank">路由</a></li>
+<li><a href="http://www.expressjs.com.cn/guide/using-middleware.html" target="_blank">中间件</a></li>
+<li><a href="http://www.expressjs.com.cn/guide/using-template-engines.html" target="_blank">模版引擎</a></li>
+<li><a href="http://elevenbeans.github.io/2016/05/31/node-mysql-CRUD/" target="_blank">数据库操作</a></li>
+</ul>
+</li>
+<li>service 调用：<a href="https://github.com/vpulim/node-soap" target="_blank">node-soap</a>, <a href="https://github.com/request/request" target="_blank">request</a></li>
+<li>Java 调用: <a href="https://github.com/villadora/node-hessian" target="_blank">node-hessian</a>, <a href="https://github.com/joeferner/node-java" target="_blank">node-java</a></li>
+<li><a href="https://hexo.io/" target="_blank">hexo</a></li>
+<li>... ...</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2>桌面应用开发</h2>
+<ul>
+<li><a href="http://nwjs.io/" target="_blank">node-webkit</a></li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article>
+<h2 class="flexbox vleft">单元测试</h2>
+<ul>
+<li><a href="https://github.com/mochajs/mocha" target="_blank">mocha</a> + <a href="https://github.com/tj/should.js" target="_blank">should</a> + <a href="https://github.com/gotwarlost/istanbul" target="_blank">istanbul</a>(后端)</li>
+<li><a href="https://github.com/mochajs/mocha" target="_blank">mocha</a> + <a href="https://github.com/chaijs/chai" target="_blank">chai</a> + <a href="https://github.com/Medium/phantomjs" target="_blank">phantomjs</a>(前端)</li>
+</ul>
+
+</article></section></slide>
+<slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
+<h1>Over ~</h1>
+
+</article></section></slide>
+        
+
+        <!-- <slide class="slide logoslide dark nobackground">
+            <article class="flexbox vcenter">
+                <h2 style="color: white;">Powered By nodeppt v1.4.5</h2>
+            </article>
+        </slide> -->
+        <div class="slideTip" id="tip"></div>
+    </slides>
+</div>
+<canvas id="drawBoard" class="draw-board" width="900" height="700"></canvas>
+<div class="progress"><span id="progress"></span></div>
+<div id="_buttons">
+    <div class="_btn-box" id="_btn-box" style="display:none;">
+        <button class="fa fa-arrow-circle-left" id="_btn-prev"></button>
+        <button class="fa fa-arrow-circle-right" id="_btn-next"></button>
+        <button class="fa fa-paint-brush" id="_btn-brush"></button>
+        <button class="fa fa-compress" id="_btn-overview" data-toggle="fa fa-expand"></button>
+    </div>
+    <button class="fa fa-bars" id="_btn-bar"  data-toggle="fa fa-close"></button>
+</div>
+<script src="./js/mixjs/lib/mix.0.3.0.min.js"></script>
+<script>
+    var ASSET_RELATIVE_DIR = ".";
+</script>
+<script>
+var base = location.protocol + '//' + location.host;
+
+var path = (location.pathname + '#').split('/').filter(function(v){
+    return !!v;
+});
+path.pop();
+path = path.join('/');
+if (typeof ASSET_RELATIVE_DIR === 'string') {
+    path = path + '/' + ASSET_RELATIVE_DIR;
+}
+MixJS.config({
+    baseURL: [ base, path, 'js'].join('/')+'/'
+});
+
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'slide',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/highlight.pack.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
+});
+</script>
+
+
+<!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  config: ["TeX-AMS-MML_HTMLorMML.js"],
+  tex2jax: {inlineMath: [['\\(','\\)']]}});
+  //['$','$'], 避免货币价格冲突
+</script>
+<script type="text/javascript" src="./js/mathjax/MathJax.js"></script>
+
+<!--placeholder-->
+</body>
+</html>
