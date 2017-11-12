@@ -21,7 +21,7 @@
 <div class="slides">
     <slides id="container">
         <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script><h1>Hybrid 版<a href="https://english.ctrip.com/flightsh5/status/?opentest=1" target="_blank">航班动态</a>开发小结</h1>
+<h1>Hybrid 版<a href="https://english.ctrip.com/flightsh5/status/?opentest=1" target="_blank">航班动态</a>开发小结</h1>
 <p>—— 这可能是我们<strong>机票</strong>首个 H5 和 Native <strong>协作开发</strong>的项目</p>
 
 </article></section></slide>
@@ -133,36 +133,7 @@ DataView 组件(based on nothing) + 逻辑和视图分层</p>
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
 <h1>Q&amp;A</h1>
-  <script src="https://unpkg.com/frappe-charts@0.0.4/dist/frappe-charts.min.iife.js"></script>
 
-<div id = "chart"></div><script>
-const data = {
-    labels: ["12am-3am", "3am-6pm", "6am-9am", "9am-12am",
-        "12pm-3pm", "3pm-6pm", "6pm-9pm", "9am-12am"
-    ],
-    datasets: [
-        {
-            title: "Some Data",
-            color: "light-blue",
-            values: [25, 40, 30, 35, 8, 52, 17, -4]
-        },
-        {
-            title: "Another Set",
-            color: "violet",
-            values: [25, 50, -10, 15, 18, 32, 27, 14]
-        }
-    ]
-}
-
-const chart = new Chart({
-    parent: '#chart', // or a DOM element
-    title: "My Awesome Chart",
-    data: data,
-    type: 'line', // or 'line', 'scatter', 'pie', 'percentage'
-    height: 250,
-    color: 'white'
-})
-</script>
 </article></section></slide>
         
 
